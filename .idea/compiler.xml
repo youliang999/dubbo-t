@@ -19,10 +19,9 @@
       </profile>
       <profile default="false" name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <sourceTestOutputDir name="target\generated-test-sources\test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="test" />
         <module name="test-pubilc-interface" />
         <module name="test-web-consumer" />
       </profile>
@@ -40,10 +39,17 @@
         <processorPath useClasspath="true" />
         <module name="EquipmentSys" />
       </profile>
+      <profile default="false" name="Annotation profile for test" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target\generated-test-sources\test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="test" />
+      </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="EquipmentSys" target="1.6" />
-      <module name="test" target="1.5" />
+      <module name="test" target="1.6" />
       <module name="test-dubbo-provider" target="1.6" />
       <module name="test-pubilc-interface" target="1.5" />
       <module name="test-web-consumer" target="1.5" />

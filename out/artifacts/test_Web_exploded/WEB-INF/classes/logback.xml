@@ -2,7 +2,7 @@
 
 <configuration scan="true" scanPeriod="3 seconds">
     <!-- 日志文件名 -->
-    <property name="logFileName" value="cyl-test1-web" />
+    <property name="logFileName" value="test" />
     <property name="log.dir" value="${log.dir:-logs}"/>
 
     <!--设置日志输出为控制台-->

@@ -33,6 +33,19 @@
 		<dubbo:reference id="equipmentTypeService" interface="com.java1234.service.EquipmentTypeService"/>
 		<dubbo:reference id="userService" interface="com.java1234.service.UserService"/>
 
+
+		<mvc:interceptors>
+			
+			<bean class="controller.interceptors.SessionBindInterceptor">
+				<property name="excludeUrlPatterns">
+					<list>
+						<value>/user/login.do</value>
+						<value>/user/logout.do</value>
+					</list>
+				</property>
+			</bean>
+			
+		</mvc:interceptors>
 		<bean
 			class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 			<property name="prefix" value="/" />

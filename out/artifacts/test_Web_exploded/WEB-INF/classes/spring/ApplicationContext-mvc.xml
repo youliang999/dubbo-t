@@ -17,6 +17,9 @@
 	<mvc:resources mapping="/uploadFiles/**" location="/uploadFiles/" />
 	<mvc:resources mapping="/WEB-INF/html/**" location="/WEB-INF/html/" />
 
+	<mvc:interceptors>
+			<bean class="controller.interceptors.SessionBindInterceptor"/>
+	</mvc:interceptors>
 	<!-- 配置SpringMVC的视图解析器 -->
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
